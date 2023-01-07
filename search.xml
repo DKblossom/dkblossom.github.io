@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>cses problem set additional problems</title>
+      <link href="/2023/01/07/cses%20problem%20set%20additional%20problems/"/>
+      <url>/2023/01/07/cses%20problem%20set%20additional%20problems/</url>
+      
+        <content type="html"><![CDATA[<p>to do</p><span id="more"></span>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> competitive programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>arch installation</title>
+      <link href="/2023/01/07/arch%20installation/"/>
+      <url>/2023/01/07/arch%20installation/</url>
+      
+        <content type="html"><![CDATA[<p>to do</p><span id="more"></span>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> operating system </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>usaco gold</title>
+      <link href="/2023/01/07/usaco%20gold/"/>
+      <url>/2023/01/07/usaco%20gold/</url>
+      
+        <content type="html"><![CDATA[<p>to do</p><span id="more"></span>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> competitive programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>usaco silver</title>
+      <link href="/2023/01/07/usaco%20silver/"/>
+      <url>/2023/01/07/usaco%20silver/</url>
+      
+        <content type="html"><![CDATA[<p>to do</p><span id="more"></span>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> competitive programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>contest template</title>
+      <link href="/2022/09/11/contest%20template/"/>
+      <url>/2022/09/11/contest%20template/</url>
+      
+        <content type="html"><![CDATA[<p>I am so weak</p><span id="more"></span><h1 id="vimrc">vimrc</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">se ru nu rnu cin cul sc so=4 ls=2 bs=2 ts=2 sw=2</span><br><span class="line">syntax on</span><br><span class="line">ino jk &lt;esc&gt;la</span><br><span class="line">ino kk &lt;esc&gt;</span><br><span class="line">nno &lt;F9&gt; :call Run()&lt;CR&gt;</span><br><span class="line">func! Run()</span><br><span class="line">    exec "w"</span><br><span class="line">    exec '!g++ % -o %&lt;'</span><br><span class="line">    exec '!time ./%&lt;'</span><br><span class="line">    endfunc</span><br><span class="line">ino &lt;F9&gt; &lt;esc&gt;&lt;F9&gt;</span><br><span class="line">autocmd BufNewFile *.cpp 0r "home\user\template.cpp"</span><br></pre></td></tr></table></figure><h1 id="c-template">C++ template</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> gcc optimize(<span class="string">'ofast'</span>,<span class="string">'unroll-loops'</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> endl <span class="string">'\n'</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ff first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ss second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb emplace_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(),x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> sz(x) (int)x.size()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(a,b,c) for(int a=b;a&lt;c;a++)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; pi;</span><br><span class="line"><span class="keyword">typedef</span> vector&lt;<span class="type">int</span>&gt; vi;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="type">const</span> ll maxm = <span class="number">100000</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> int_inf = (<span class="number">1</span>&lt;&lt;<span class="number">31</span>);</span><br><span class="line"><span class="type">const</span> ll ll_inf = (<span class="number">1ll</span>&lt;&lt;<span class="number">63</span>);</span><br><span class="line"><span class="type">const</span> ll mod = <span class="number">1000000007</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>{</span><br><span class="line"><span class="comment">//code here</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="type">int</span> t = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//cin &gt;&gt; t;</span></span><br><span class="line"><span class="keyword">while</span>(t--) <span class="built_in">solve</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> competitive programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown syntax</title>
+      <link href="/2022/07/31/markdown%20syntax/"/>
+      <url>/2022/07/31/markdown%20syntax/</url>
+      
+        <content type="html"><![CDATA[<h1 id="introduction">introduction</h1><h1 id="syntax">syntax</h1><h2 id="headers">headers</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># h1</span><br><span class="line">## h2</span><br><span class="line">### h3</span><br><span class="line">#### h4</span><br><span class="line">##### h5</span><br><span class="line">###### h6</span><br></pre></td></tr></table></figure><h2 id="blockquotes">blockquotes</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; An apple a day keeps the doctor away.</span><br><span class="line"></span><br><span class="line">&gt; DKblossom is so weak.</span><br><span class="line">&gt;&gt; Weak is DKblossom.</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><blockquote><p>An apple a day keeps the doctor away.</p></blockquote><blockquote><p>DKblossom is so weak. &gt; Weak is DKblossom.</p></blockquote><hr /><h2 id="unordered-lists">unordered lists</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* hello</span><br><span class="line">* hi</span><br><span class="line"></span><br><span class="line">+ goodbye</span><br><span class="line">+ byebye</span><br><span class="line"></span><br><span class="line">- DKblossom</span><br><span class="line">- weak</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><ul><li><p>hello</p></li><li><p>hi</p></li><li><p>goodbye</p></li><li><p>byebye</p></li><li><p>DKblossom</p></li><li><p>weak</p></li></ul><hr /><h2 id="ordered-list">ordered list</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. blue</span><br><span class="line">2. yellow</span><br><span class="line">3. red</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><ol type="1"><li>blue</li><li>yellow</li><li>red</li></ol><hr /><h2 id="codeblock">codeblock</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\```cpp</span><br><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">\```</span><br><span class="line"></span><br><span class="line">use `vector`</span><br><span class="line">&quot;vector&lt;int&gt; vc&quot;</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br></pre></td></tr></table></figure><p>use <code>vector</code> "vector<int> vc"</p><hr /><h2 id="horizontal-rules">horizontal rules</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---------------------------</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><hr /><hr /><h2 id="table">table</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 1 | 2 | 3 |</span><br><span class="line">|:-:|:-:|:-:|</span><br><span class="line">|123|456|789|</span><br><span class="line">|987|654|321|</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><table><thead><tr class="header"><th style="text-align: center;">1</th><th style="text-align: center;">2</th><th style="text-align: center;">3</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">123</td><td style="text-align: center;">456</td><td style="text-align: center;">789</td></tr><tr class="even"><td style="text-align: center;">987</td><td style="text-align: center;">654</td><td style="text-align: center;">321</td></tr></tbody></table><hr /><h2 id="link">link</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[link](https://dkblossom.github.io/2022/07/31/markdown%20syntax/)</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><p><ahref="https://dkblossom.github.io/2022/07/31/markdown%20syntax/">link</a></p><hr /><h2 id="emphasis">emphasis</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line">_single underscores_</span><br><span class="line">**double asterisks**</span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure><hr /><p><em>single asterisks</em> <em>single underscores</em> <strong>doubleasterisks</strong> <strong>double underscores</strong></p><hr /><h2 id="images">images</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![alt text](https://cdnstatic.svc.litv.tv/pics/37579-010004-266360-S.jpg)</span><br><span class="line">![alt text](wrong website)</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><p><imgsrc="https://cdnstatic.svc.litv.tv/pics/37579-010004-266360-S.jpg"alt="alt text" /> <img src="wrong%20website" alt="alt text" /></p><hr /><h2 id="strikethrough">strikethrough</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~mistaken text~~</span><br></pre></td></tr></table></figure><p>preview:</p><hr /><p><del>mistaken text</del></p><hr /><h2 id="inline-html">inline HTML</h2><p>code:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">This is a regular paragraph.</span><br><span class="line"></span><br><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;Foo&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line"></span><br><span class="line">This is another regular paragraph.</span><br></pre></td></tr></table></figure><p>preview:</p><hr />This is a regular paragraph.<table><tr><td>Foo</td></tr></table><p>This is another regular paragraph.</p><hr />]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
