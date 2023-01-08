@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="現在目前正在刷這單中，希望在初選前能全部寫完然後過初選 1087 - shortest subsequence   code  void solve(){ string str; map&lt;char,int&gt; mp; mp[&#39;A&#39;] &#x3D; 0, mp[&#39;T&#39;] &#x3D; 1, mp[&#39;C&#39;] &#x3D; 2, mp[&#39;G&#39;] &#x3D; 3; string ch &#x3D; &quot;ATCG&quot;;  cin">
+    <meta name="description" content="現在目前正在刷這單中，希望在初選前能全部寫完然後過初選 1087 - shortest subsequence   題解   從頭開始遍歷每個字元，如果上一個選擇的位置和當下的位置所形成的區間內擁有每一種字元，即選擇當下的字元，最後再在尾端加上最後選擇位置後方沒有出現過的任意一個字元   1146 - counting bits   題解   轉換一下題目變成從的$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cses problem set additional problems">
 <meta property="og:url" content="https://dkblossom.github.io/2023/01/07/cses%20problem%20set%20additional%20problems/index.html">
 <meta property="og:site_name" content="DKblossom&#39;s coding blog">
-<meta property="og:description" content="現在目前正在刷這單中，希望在初選前能全部寫完然後過初選 1087 - shortest subsequence   code  void solve(){ string str; map&lt;char,int&gt; mp; mp[&#39;A&#39;] &#x3D; 0, mp[&#39;T&#39;] &#x3D; 1, mp[&#39;C&#39;] &#x3D; 2, mp[&#39;G&#39;] &#x3D; 3; string ch &#x3D; &quot;ATCG&quot;;  cin">
+<meta property="og:description" content="現在目前正在刷這單中，希望在初選前能全部寫完然後過初選 1087 - shortest subsequence   題解   從頭開始遍歷每個字元，如果上一個選擇的位置和當下的位置所形成的區間內擁有每一種字元，即選擇當下的字元，最後再在尾端加上最後選擇位置後方沒有出現過的任意一個字元   1146 - counting bits   題解   轉換一下題目變成從的$">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-08T08:52:59.244Z">
+<meta property="article:modified_time" content="2023-01-08T09:03:59.230Z">
 <meta property="article:tag" content="competitive programming">
 <meta property="article:tag" content="operating system">
 <meta property="article:tag" content="solution">
@@ -223,50 +223,20 @@ mjx-container[display="true"] + br {
 &lt;h2 id=&#34;shortest-subsequence&#34;&gt;1087 - shortest subsequence&lt;/h2&gt;
 &lt;details&gt;
 &lt;summary&gt;
-code
+題解
 &lt;/summary&gt;
-&lt;p&gt;void solve(){ string str; map&amp;lt;char,int&amp;gt; mp;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mp[&#39;A&#39;] = 0, mp[&#39;T&#39;] = 1, mp[&#39;C&#39;] = 2, mp[&#39;G&#39;] = 3;
-string ch = &#34;ATCG&#34;;
-
-cin &amp;gt;&amp;gt; str;
-
-int n = sz(str);
-int arr[4] = {0,0,0,0};
-string ans;
-
-rep(i,0,n){
-    arr[mp[str[i]]] = 1;
-    bool check = 1;
-    rep(i,0,4) if(arr[i]==0) check = 0;
-    if(check){
-        ans.push_back(str[i]);
-        rep(i,0,4) arr[i] = 0;
-    }
-}
-
-rep(i,0,4) if(arr[i]==0){
-    ans.push_back(ch[i]);
-    cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl;
-    return;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;
+從頭開始遍歷每個字元，如果上一個選擇的位置和當下的位置所形成的區間內擁有每一種字元，即選擇當下的字元，最後再在尾端加上最後選擇位置後方沒有出現過的任意一個字元
+&lt;/p&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;counting-bits&#34;&gt;1146 - counting bits&lt;/h2&gt;
 &lt;details&gt;
 &lt;summary&gt;
-code
+題解
 &lt;/summary&gt;
-&lt;p&gt;void solve(){ ll n; cin &amp;gt;&amp;gt; n;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;n++;
-ll cnt = 0;
-for(ll i=1;(1ll&amp;lt;&amp;lt;(i-1))&amp;lt;=n;i++){
-    ll pw = (1ll&amp;lt;&amp;lt;i);
-    cnt += (n/pw)*(pw/2)+max(0ll,n%pw-pw/2);
-}
-
-cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;
+轉換一下題目變成從&lt;span class=&#34;math inline&#34;&gt;&lt;mjx-container class=&#34;MathJax&#34; jax=&#34;SVG&#34;&gt;&lt;svg style=&#34;vertical-align: -0.05ex;&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3.054ex&#34; height=&#34;1.557ex&#34; role=&#34;img&#34; focusable=&#34;false&#34; viewBox=&#34;0 -666 1350 688&#34;&gt;&lt;g stroke=&#34;currentColor&#34; fill=&#34;currentColor&#34; stroke-width=&#34;0&#34; transform=&#34;scale(1,-1)&#34;&gt;&lt;g data-mml-node=&#34;math&#34;&gt;&lt;g data-mml-node=&#34;mn&#34;&gt;&lt;path data-c=&#34;30&#34; d=&#34;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&#34;/&gt;&lt;/g&gt;&lt;g data-mml-node=&#34;mtext&#34; transform=&#34;translate(500,0)&#34;&gt;&lt;path data-c=&#34;A0&#34; d=&#34;&#34;/&gt;&lt;/g&gt;&lt;g data-mml-node=&#34;mi&#34; transform=&#34;translate(750,0)&#34;&gt;&lt;path data-c=&#34;1D45B&#34; d=&#34;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&#34;/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;的$bit數量
+&lt;/p&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;section&#34;&gt;&lt;/h2&gt;
 "><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
@@ -323,50 +293,20 @@ cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl;&lt;/code&gt;&lt;/pre&gt;
 <h2 id="shortest-subsequence">1087 - shortest subsequence</h2>
 <details>
 <summary>
-code
+題解
 </summary>
-<p>void solve(){ string str; map&lt;char,int&gt; mp;</p>
-<pre><code>mp['A'] = 0, mp['T'] = 1, mp['C'] = 2, mp['G'] = 3;
-string ch = "ATCG";
-
-cin &gt;&gt; str;
-
-int n = sz(str);
-int arr[4] = {0,0,0,0};
-string ans;
-
-rep(i,0,n){
-    arr[mp[str[i]]] = 1;
-    bool check = 1;
-    rep(i,0,4) if(arr[i]==0) check = 0;
-    if(check){
-        ans.push_back(str[i]);
-        rep(i,0,4) arr[i] = 0;
-    }
-}
-
-rep(i,0,4) if(arr[i]==0){
-    ans.push_back(ch[i]);
-    cout &lt;&lt; ans &lt;&lt; endl;
-    return;
-}</code></pre>
-<p>}</p>
+<p>
+從頭開始遍歷每個字元，如果上一個選擇的位置和當下的位置所形成的區間內擁有每一種字元，即選擇當下的字元，最後再在尾端加上最後選擇位置後方沒有出現過的任意一個字元
+</p>
 </details>
 <h2 id="counting-bits">1146 - counting bits</h2>
 <details>
 <summary>
-code
+題解
 </summary>
-<p>void solve(){ ll n; cin &gt;&gt; n;</p>
-<pre><code>n++;
-ll cnt = 0;
-for(ll i=1;(1ll&lt;&lt;(i-1))&lt;=n;i++){
-    ll pw = (1ll&lt;&lt;i);
-    cnt += (n/pw)*(pw/2)+max(0ll,n%pw-pw/2);
-}
-
-cout &lt;&lt; cnt &lt;&lt; endl;</code></pre>
-<p>}</p>
+<p>
+轉換一下題目變成從<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.054ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1350 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g><g data-mml-node="mtext" transform="translate(500,0)"><path data-c="A0" d=""></path></g><g data-mml-node="mi" transform="translate(750,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span>的$bit數量
+</p>
 </details>
 <h2 id="section"></h2>
 
@@ -410,50 +350,20 @@ cout &lt;&lt; cnt &lt;&lt; endl;</code></pre>
 &lt;h2 id=&#34;shortest-subsequence&#34;&gt;1087 - shortest subsequence&lt;/h2&gt;
 &lt;details&gt;
 &lt;summary&gt;
-code
+題解
 &lt;/summary&gt;
-&lt;p&gt;void solve(){ string str; map&amp;lt;char,int&amp;gt; mp;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mp[&#39;A&#39;] = 0, mp[&#39;T&#39;] = 1, mp[&#39;C&#39;] = 2, mp[&#39;G&#39;] = 3;
-string ch = &#34;ATCG&#34;;
-
-cin &amp;gt;&amp;gt; str;
-
-int n = sz(str);
-int arr[4] = {0,0,0,0};
-string ans;
-
-rep(i,0,n){
-    arr[mp[str[i]]] = 1;
-    bool check = 1;
-    rep(i,0,4) if(arr[i]==0) check = 0;
-    if(check){
-        ans.push_back(str[i]);
-        rep(i,0,4) arr[i] = 0;
-    }
-}
-
-rep(i,0,4) if(arr[i]==0){
-    ans.push_back(ch[i]);
-    cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl;
-    return;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;
+從頭開始遍歷每個字元，如果上一個選擇的位置和當下的位置所形成的區間內擁有每一種字元，即選擇當下的字元，最後再在尾端加上最後選擇位置後方沒有出現過的任意一個字元
+&lt;/p&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;counting-bits&#34;&gt;1146 - counting bits&lt;/h2&gt;
 &lt;details&gt;
 &lt;summary&gt;
-code
+題解
 &lt;/summary&gt;
-&lt;p&gt;void solve(){ ll n; cin &amp;gt;&amp;gt; n;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;n++;
-ll cnt = 0;
-for(ll i=1;(1ll&amp;lt;&amp;lt;(i-1))&amp;lt;=n;i++){
-    ll pw = (1ll&amp;lt;&amp;lt;i);
-    cnt += (n/pw)*(pw/2)+max(0ll,n%pw-pw/2);
-}
-
-cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; endl;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;
+轉換一下題目變成從&lt;span class=&#34;math inline&#34;&gt;&lt;mjx-container class=&#34;MathJax&#34; jax=&#34;SVG&#34;&gt;&lt;svg style=&#34;vertical-align: -0.05ex;&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;3.054ex&#34; height=&#34;1.557ex&#34; role=&#34;img&#34; focusable=&#34;false&#34; viewBox=&#34;0 -666 1350 688&#34;&gt;&lt;g stroke=&#34;currentColor&#34; fill=&#34;currentColor&#34; stroke-width=&#34;0&#34; transform=&#34;scale(1,-1)&#34;&gt;&lt;g data-mml-node=&#34;math&#34;&gt;&lt;g data-mml-node=&#34;mn&#34;&gt;&lt;path data-c=&#34;30&#34; d=&#34;M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z&#34;/&gt;&lt;/g&gt;&lt;g data-mml-node=&#34;mtext&#34; transform=&#34;translate(500,0)&#34;&gt;&lt;path data-c=&#34;A0&#34; d=&#34;&#34;/&gt;&lt;/g&gt;&lt;g data-mml-node=&#34;mi&#34; transform=&#34;translate(750,0)&#34;&gt;&lt;path data-c=&#34;1D45B&#34; d=&#34;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&#34;/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;&lt;/span&gt;的$bit數量
+&lt;/p&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;section&#34;&gt;&lt;/h2&gt;
 "><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
